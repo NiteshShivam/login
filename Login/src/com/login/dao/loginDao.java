@@ -4,7 +4,7 @@ public class loginDao {
 String query ="select * from login where uname=? and pass=?";
 public boolean checklogin(String uname,String pass) throws ClassNotFoundException, SQLException
 {   Class.forName("com.mysql.cj.jdbc.Driver");
-     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/nitesh","root","And08141126");
+     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/nitesh","root","password");
      PreparedStatement ps = con.prepareStatement(query);
      ps.setString(1, uname);
      ps.setString(2, pass);
